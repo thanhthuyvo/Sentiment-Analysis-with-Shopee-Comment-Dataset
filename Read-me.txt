@@ -1,0 +1,34 @@
+Tiến trình thực hiện Project chia làm 4 file:
+- File Project_1_Data_pre bao gồm các bước:
++ Tiền xử lý dữ liệu thô
++ Chuẩn hóa Unicode tiếng Việt
++ Tokenizer văn bản tiếng Việt bằng thư viện
++ Xóa các stopword tiếng Việt
++ Xử lý các dữ liệu null trước và sau khi chuẩn hóa dữ liệu
+=> Sau khi xử lý data được lưu xuống file csv với tên pre_data.csv trong thư mục /Data
+-------------------------------------------------------------------------------------------------------------------------------
+- File Project_1_Scikit-learn xử lý và chạy model qua thư viện ML Scikit-learn thông qua các Model:
++ MultinomialNB
++ GradientBoosting
++ DecisionTree
++ KNN
++ RandomForest
++ Multi-Layer Perceptron
+=> Sau khi chạy model cho ra accuracy khá ổn từ 80-91%, nhưng khi xem xét lại recall và f1-score, nhận thấy rằng các model chưa thực sự hiệu quả và cần cải thiện
+-------------------------------------------------------------------------------------------------------------------------------
+- File Project_1_Scikit-learn_resample xử lý, resample data và chạy model qua thư viện ML Scikit-learn để cải thiện tính hiệu quả. Các model đã thực hiện:
++ MultinomialNB
++ GradientBoosting
++ DecisionTree
++ KNN
+=> Sau khi resample data nhận thấy rằng accuracy giảm đi, nhưng recall và f1-score tăng đáng kể, cho thấy tính hiệu quả được cải thiên.
+=> Có thể chấp nhận các model đã chạy qua cách cải thiện resample data. 
+=> Model DecisionTree cho ra kết quả tốt nhất và có thể áp dụng nó để predict (Accuracy: 92,6%), đồng thời các điểm recall, f1-score đều khá cao( dao động từ (88%-93%) 
+-------------------------------------------------------------------------------------------------------------------------------
+- File Project_1_SpySpark chạy model qua thư viện pyspark, data đã được resample để cân bằng dữ liệu. Các model đã được thực hiện:
++ DecisionTree
++ NaiveBayes
++ RandomForestClassifier
++ LogisticRegression
+=> Các model chạy bằng thư viện pyspark đều cho ra kết quả khá tốt (83 - 99%).
+=> Model DecisionTree cho ra kết quả tốt nhất và có thể áp dụng model này.
