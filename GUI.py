@@ -406,7 +406,7 @@ if condition == 'Introduction':
 
 elif condition == 'EDA':
 
-    data = pd.read_csv("https://dramas.pro/Products_Shopee_comments.csv", delimiter=',')
+    data = pd.read_csv("http://dramas.pro/Products_Shopee_comments.csv", delimiter=',')
     original_title_data = '<p style="font-family:Garamond, serif; color:Blue; font-size: 30px;"><b>Raw Data</b></p>'
     st.markdown(original_title_data,unsafe_allow_html=True)
     st.dataframe(data.head(20))
