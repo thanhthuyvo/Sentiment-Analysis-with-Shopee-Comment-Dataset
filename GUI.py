@@ -564,9 +564,6 @@ elif condition == 'Model Evaluation':
 
 
 elif condition == 'Model Prediction':
-    
-    sc = SparkContext.getOrCreate()
-    spark=SparkSession(sc)
 
     list_Model=["DecisionTree","ExtraTreeClassifier"]
     select_model_mpredict = st.sidebar.selectbox(
