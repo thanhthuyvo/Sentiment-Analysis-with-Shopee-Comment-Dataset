@@ -406,7 +406,7 @@ if condition == 'Introduction':
 
 elif condition == 'EDA':
 
-    data = pd.read_csv("Data/Products_Shopee_comments.csv", delimiter=',')
+    data = pd.read_csv("https://dramas.pro/Products_Shopee_comments.csv", delimiter=',')
     original_title_data = '<p style="font-family:Garamond, serif; color:Blue; font-size: 30px;"><b>Raw Data</b></p>'
     st.markdown(original_title_data,unsafe_allow_html=True)
     st.dataframe(data.head(20))
@@ -433,7 +433,7 @@ elif condition == 'EDA':
     st.text(info_subdata)
 
 elif condition == 'Preprocessing':
-    data = pd.read_csv("Data/Products_Shopee_comments.csv", delimiter=',')
+    data = pd.read_csv("https://dramas.pro/Products_Shopee_comments.csv", delimiter=',')
 
     original_title_visual_products = '<p style="font-family:Garamond, serif; color:Blue; font-size: 30px;"><b> Data before Preprocessing</b></p>'
     st.markdown(original_title_visual_products,unsafe_allow_html=True)
